@@ -73,5 +73,6 @@ module IvanTheTerriblesBlog
     config.assets.version = '1.0'
 
     config.eager_load = true
+    config.assets.initialize_on_precompile = false
   end
 end
