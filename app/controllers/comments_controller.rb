@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
+caches_action :index
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+  @comments = Comment.includes(:replies).select('comments.*, posts.name as post_name')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -2,14 +2,13 @@
 
 <p>
   <b>Body:</b>
-  <%= @comment.body %>
+  <%= @comment_body %>
 </p>
 
 <p>
   <b>Post:</b>
   <%= @comment.post %>
 </p>
-
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>
